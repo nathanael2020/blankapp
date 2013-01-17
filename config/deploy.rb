@@ -3,7 +3,7 @@ require "bundler/capistrano"
 set :application, "blankapp"
 set :repository,  "git://github.com/nathanael2020/blankapp.git"
  
- set :use_sudo
+# set :use_sudo
  
 set :scm, :git
  
