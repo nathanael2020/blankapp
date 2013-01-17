@@ -3,6 +3,8 @@ require "bundler/capistrano"
 set :application, "blankapp"
 set :repository,  "git://github.com/nathanael2020/blankapp.git"
  
+ set :use_sudo
+ 
 set :scm, :git
  
 # set :deploy_to "/u/apps/#{application}"
@@ -23,7 +25,7 @@ logger.level = Capistrano::Logger::DEBUG
  
 # Since we're using pty, load the path ourselves
 set :default_environment, {
-  "PATH" => "/home/nathanael/.rbenv/shims:/home/nathanael/.rbenv/bin:$PATH"
+  "PATH" => "/u/apps/blankapp:/home/nathanael/.rbenv/shims:/home/nathanael/.rbenv/bin:$PATH"
 }
  
  
