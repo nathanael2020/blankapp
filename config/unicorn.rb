@@ -20,7 +20,7 @@ if env == "production"
   working_directory "/u/apps/blankapp/current"
  
   # feel free to point this anywhere accessible on the filesystem
-  user 'nathanael', 'staff' # 'user', 'group'
+  user 'nathanael', 'nathanael' # 'user', 'group'
   shared_path = "/u/apps/blankapp/shared"
  
   stderr_path "#{shared_path}/log/unicorn.stderr.log"
