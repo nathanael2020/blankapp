@@ -44,7 +44,7 @@ before_fork do |server, worker|
   # we send it a QUIT.
   #
   # This enables 0 downtime deploys.
-  old_pid = "/tmp/unicorn.my_app_name.pid.oldbin"
+  old_pid = "/tmp/unicorn.blankapp.pid.oldbin"
   if File.exists?(old_pid) && server.pid != old_pid
     begin
       Process.kill("QUIT", File.read(old_pid).to_i)
